@@ -29,8 +29,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.goForwardButton.setOnClickListener{
-            val action = HomeFragmentDirections.actionHomeFragmentToExtraFragment()
+        binding.calculateButton.setOnClickListener{
+            val action = HomeFragmentDirections.actionHomeFragmentToExtraFragment(numOne = binding.number1.text.toString(), numTwo = binding.number2.text.toString())
             view.findNavController().navigate(action)
         }
     }
